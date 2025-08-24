@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalyan Sai Tadivalasa</title>
+    <link rel="icon" href="https://i.ibb.co/zRsTj3p/Frame-1-37.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" class="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        body {
+            font-family: 'Lexend', sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            background-color: #202020;
+        }
+        
+        .container {
+            width: 1170px;
+            margin: auto;
+        }
+        /*---------------------------Header---------------------------*/
+        
+        .header-area {
+            padding: 25px 0;
+            transition: padding .3s;
+        }
+        
+        .header-area.sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 99;
+            background-color: #202020;
+            padding: 5px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            position: relative;
+            text-transform: uppercase;
+            font-size: 26px;
+            font-weight: 700;
+        }
+        
+        .logo .fa-bolt {
+            color: #fed700;
+            font-size: 19.5px;
+            position: absolute;
+            top: 60%;
+            left: 100%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        
+        .header ul li:first-child {
+            margin-right: auto;
+        }
+        
+        .header ul {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header ul li {
+            margin: 0 15px;
+        }
+        
+        .header ul li a {
+            text-transform: capitalize;
+            display: block;
+        }
+        
+        .header ul li a.active {
+            color: #fed700;
+        }
+        
+        .header ul li a:hover {
+            color: #fed700;
+        }
+        
+        .header .menu_icon {
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            display: none;
+        }
+        /*---------------------------HomePage--------------------------*/
+        
+        .FirstElement {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-top: 5rem;
+        }
+        
+        .FirstElement.adjusted-padding {
+            padding-top: 40px;
+        }
+        
+        .FirstElement .profile-photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 15px solid #444444;
+            box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5)
+        }
+        
+        .profile-photo .img {
+            height: 100%;
+            width: 100%;
+            transition: 0.5s;
+        }
+        
+        .FirstElement .profile-photo img:hover {
+            transform: scale(1.2);
+        }
+        
+        .profile-text {
+            max-width: 750px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .profile-text h5 {
+            color: #e5e5e5;
+            font-size: 14px;
+        }
+        
+        .profile-text h1 {
+            color: #fed700;
+            font-size: 3rem;
+        }
+        
+        .profile-text p {
+            color: #e5e5e5;
+        }
+        
+        .profile-text .social i {
+            color: #e5e5e5;
+            font-size: 18px;
+            margin-right: 10px;
+            transition: 0.5s;
+        }
+        
+        .profile-text .social i:hover {
+            color: #fed700;
+            transform: rotate(360deg);
+        }
+        /*---------------------------About---------------------------*/
+        
+        .about-area {
+            padding-top: 130px;
+            background-color: #202020;
+        }
+        
+        .about {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        
+        .about-content {
+            flex-basis: 60%;
+        }
+        
+        .about-content h4 {
+            color: #fed700;
+            font-size: 40px;
+            line-height: 70px;
+            text-transform: capitalize;
+        }
+        
+        .about-content ul {
+            color: #fff;
+            text-align: justify;
+        }
+        
+        .about-content ul li {
+            list-style-type: disc;
+            margin-bottom: 10px;
+        }
+        
+        .about-skills {
+            flex-basis: 35%;
+        }
+        
+        .about-skills ul li {
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            color: #fff;
+            font-size: 18px;
+        }
+        
+        .about-skills ul li:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        /*---------------------------Button---------------------------*/
+        
+        .btn-group {
+            margin: 45px 0;
+        }
+        
+        .btn-group .btn {
+            border-color: #d5d5d5;
+            color: #fff;
+            background-color: #333;
+            padding: 12px 25px;
+            margin: 5px 0;
+            margin-right: 7px;
+            border-radius: 30px;
+            border: 2px solid #e5e5e5;
+            box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+        }
+        
+        .btn.active {
+            border-color: #fed700;
+        }
+        /*---------------------------Education & Internship---------------------------*/
+        
+        .education-content .row {
+            display: flex;
+            border-radius: 5px;
+            height: 400px;
+            margin-bottom: 250px;
+        }
+        
+        .education-content .title {
+            color: #fed700;
+        }
+        
+        .education-content .row .education,
+        .education-content {
+            color: #e5e5e5;
+            flex: 0 0 50%;
+            max-width: 50%;
+            margin-top: 30px;
+            margin-left: 350px;
+        }
+        
+        .education-content h3.title {
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        .education-content .row.timeline-box {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        
+        .education-content .row .timeline {
+            padding: 30px 15px;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+            width: 100%;
+            position: relative;
+        }
+        
+        .education-content .row .timeline-item {
+            position: relative;
+            padding-left: 37px;
+            padding-bottom: 50px;
+        }
+        
+        .education-content .row .internship .timeline-item {
+            position: relative;
+            padding-left: 37px;
+            padding-bottom: 30px;
+        }
+        
+        .education-content .row .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        
+        .education-content .row .timeline-item::before {
+            content: "";
+            width: 1px;
+            position: absolute;
+            height: 100%;
+            left: 7px;
+            top: 0;
+            background-color: #fed700;
+        }
+        
+        .education-content .row .circle-dot {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: #e5e5e5;
+        }
+        
+        .education-content .row .timeline-title {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        
+        .education-content .row .internship .timeline-title {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .education-content .row .timeline-text {
+            line-height: 25px;
+            font-size: 16px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        /* --------------------------Skills ----------------------------- */
+        
+        .skills-content {
+            padding: 100px 0;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .skills-title {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .skills-content .skills-title h4 {
+            font-size: 40px;
+            text-transform: capitalize;
+            color: #fed700;
+            padding-bottom: 10px;
+        }
+        
+        .Skills-content .skills-title p {
+            padding-bottom: 20px;
+        }
+        
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .skill {
+            color: #e5e5e5;
+            border: 2px solid #e5e5e5;
+            border-radius: 10px;
+            width: 100%;
+            position: relative;
+            padding: 8px;
+            text-align: center;
+            flex-basis: 32%;
+            transition: .3s;
+            margin: 5px;
+        }
+        
+        .skill:hover {
+            border-color: #fed700;
+        }
+        
+        .skill h4 {
+            font-size: 26px;
+            text-transform: capitalize;
+            margin: 20px 0;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            background: #e0e0e0;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            width: 0%;
+            background-color: #fe9800;
+            border-radius: 20px;
+            transition: width 2s ease-in-out;
+        }
+        /* Define widths for each skill */
+        
+        .progress-bar span.html {
+            width: 98%;
+        }
+        
+        .progress-bar span.css {
+            width: 89%;
+        }
+        
+        .progress-bar span.js {
+            width: 80%;
+        }
+        
+        .progress-bar span.java {
+            width: 87%;
+        }
+        
+        .progress-bar span.python {
+            width: 79%;
+        }
+        
+        .progress-bar span.c {
+            width: 99%;
+        }
+        
+        .progress-bar span.csharp {
+            width: 85%;
+        }
+        /*-------------------------- frameworks------------------------ */
+        
+        .frameworks-content {
+            padding: 100px 0;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .frameworks-title {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .frameworks-content .frameworks-title h4 {
+            font-size: 40px;
+            text-transform: capitalize;
+            color: #fed700;
+            padding-bottom: 10px;
+        }
+        
+        .frameworks-content .frameworks-title p {
+            padding-bottom: 20px;
+        }
+        
+        .frameworks {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .framework {
+            color: hsl(0, 0%, 90%);
+            border: 2px solid #e5e5e5;
+            border-radius: 10px;
+            width: 100%;
+            position: relative;
+            padding: 8px;
+            text-align: center;
+            flex-basis: 32%;
+            transition: .3s;
+            margin: 5px;
+        }
+        
+        .framework:hover {
+            border-color: #fed700;
+        }
+        
+        .framework h4 {
+            font-size: 26px;
+            color: #fe9800;
+            text-transform: capitalize;
+            margin: 20px 0;
+        }
+        
+        .framework p {
+            text-align: justify;
+        }
+        /*---------------------------Projects---------------------------*/
+        
+        .project-content {
+            padding: 90px 0;
+        }
+        
+        .project-title {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .project-title h4 {
+            text-transform: uppercase;
+            font-size: 40px;
+            line-height: 40px;
+            color: #fed700;
+            margin-bottom: 20px;
+        }
+        
+        .project-title p {
+            color: #e5e5e5;
+        }
+        
+        .projects {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .project {
+            color: #e5e5e5;
+            border: 2px solid #e5e5e5;
+            border-radius: 10px;
+            width: 100%;
+            position: relative;
+            padding: 25px;
+            text-align: center;
+            flex-basis: 32%;
+            transition: .3s;
+        }
+        
+        .project i {
+            background-color: #fed700;
+            width: 60px;
+            height: 60px;
+            color: #333;
+            font-size: 26px;
+            line-height: 60px;
+            border-radius: 50%;
+        }
+        
+        .project h4 {
+            font-size: 26px;
+            color: #fe9800;
+            text-transform: capitalize;
+            margin: 20px 0;
+        }
+        
+        .project p {
+            text-align: justify;
+        }
+        
+        .project:hover {
+            border-color: #fed700;
+        }
+        /*---------------------------Contact Me---------------------------*/
+        
+        .contact-content {
+            padding: 100px 0;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .contact-content .contact-title h4 {
+            font-size: 40px;
+            text-transform: capitalize;
+            color: #fed700;
+            padding-bottom: 10px;
+        }
+        
+        .contact-content .contact-title p {
+            padding-bottom: 20px;
+        }
+        
+        .contact {
+            max-width: 700px;
+            margin: auto;
+        }
+        
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 15px;
+            border: 0;
+            color: black;
+            margin-bottom: 10px;
+        }
+        
+        .contact .submit {
+            width: auto;
+            background-color: #fed700;
+            padding: 10px 40px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .contact .submit:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        
+        #msg {
+            color: #fff;
+            font-size: 20px;
+            margin-top: -8px;
+            display: block;
+        }
+        
+        input,
+        textarea {
+            background-color: #ffffff;
+            color: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+        }
+        /*---------------------------Footer---------------------------*/
+        
+        .footer {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 15px 0 26px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .footer .message {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 10px;
+        }
+        
+        .copyright {
+            font-size: 12px;
+        }
+        /*------------------- Responsive Design on small screen -------------------*/
+        /* Medium layout */
+        
+        @media only screen and (min-width:1000px) and (max-width:1200px) {
+            .container {
+                width: 970px;
+            }
+        }
+        
+        @media(max-width:1050px) {
+            .FirstElement {
+                flex-direction: column;
+                padding-top: 2rem;
+            }
+            .profile-text {
+                padding: 40px 0px;
+            }
+        }
+        /* tablet layout */
+        
+        @media only screen and (min-width:768px) and (max-width:999px) {
+            .container {
+                width: 750px;
+            }
+        }
+        /* Mobile Layout */
+        
+        @media only screen and (max-width:767px) {
+            .container {
+                width: 350px;
+            }
+            .header .menu_icon {
+                display: block;
+            }
+            .header ul {
+                display: none;
+            }
+            .header i {
+                color: #e5e5e5;
+            }
+            .profile-text {
+                width: 350px;
+            }
+            .FirstElement .profile-text p {
+                text-align: justify;
+            }
+            .about {
+                flex-direction: column;
+                flex-basis: 100%;
+                margin-bottom: 30px;
+            }
+            .about-skills {
+                width: 100%;
+                margin-top: 30px;
+            }
+            .education-content .row {
+                flex-direction: column;
+                height: auto;
+                margin-bottom: 50px;
+            }
+            .education-content .row .education,
+            .education-content .row .internship {
+                flex-basis: 100%;
+                max-width: 100%;
+                margin-top: 30px;
+            }
+            .project {
+                flex-basis: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header-area">
+        <div class="container">
+            <div class="header">
+                <a href="" class="logo">
+                    <p>Kalyan Sai⚡&nbsp;</p>
+                </a>
+                <br>
+                <ul class="navbar">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#MySkills">MySkills</a></li>
+                    <li><a href="#FrameWorks">FrameWorks</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu_icon">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="FirstElement" id="home">
+        <div class="profile-photo">
+            <img src="https://i.ibb.co/V03X5tq8/my-image-spec.jpg" alt="Kalyan Sai">
+        </div>
+        <div class="profile-text">
+            <h5>Hi I'm </h5><br>
+            <h1 id="typing-name"></h1><br>
+            <p>
+                Welcome to my portfolio website! I’m an enthusiastic and dedicated software engineer driven by curiosity and innovation. I enjoy building creative, efficient solutions and continuously expanding my skill set. With a solid foundation in coding and problem-solving,
+                I’m eager to contribute meaningfully to the world of technology and development.
+            </p>
+            <div class="btn-group">
+                <a href="" class="btn active" target="_blank">Download CV</a>
+                <a href="mailto:kalyansai.tadivalasa@gmail.com" class="btn">Contact</a>
+            </div>
+            <div class="social">
+                <a title="Email" href="mailto:kalyansai.tadivlasa@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a title="GitHub" href="https://github.com/kalyan200412" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                <a title="WhatsApp" href="https://wa.me/919392899974" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                <a title="LinkedIn" href="https://www.linkedin.com/in/kalyan-sai-40660026b" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <section class="about-area" id="about">
+        <div class="container">
+            <div class="about">
+                <div class="about-content">
+                    <h4>About Me</h4>
+                    <ul>
+                        <li>I am a recent graduate with a strong interest in IT and non-IT fields, including software development, automation testing, and other professional opportunities.</li>
+                        <li>I am seeking an entry-level position where I can apply my skills, contribute to the organisation, and learn continuously.</li>
+                        <li>My goal is to gain hands-on experience, develop my career, and grow within a dynamic professional environment.</li>
+                    </ul>
+
+                </div>
+                <div class="about-skills">
+                    <ul>
+                        <li>Name : Kalyan Sai Tadivalasa</li>
+                        <li>Location : Guntur, Andhra Pradesh, India</li>
+                        <li>Phone : +91 93928-99974</li>
+                        <li>Email : kalyansai.tadivalasa@gmail.com</li>
+                        <li>Availabiltiy : Full-time</li>
+                        <li>Experience : Entry-level</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education-content" id="education">
+        <div class="container">
+            <div class="row">
+                <div class="education ">
+                    <h3 class="title">Education</h3>
+                    <div class="row">
+                        <div class="timeline-box">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="circle-dot"></div>
+                                    <h3 class="timeline-title">
+                                        B.Tech in Computer Science
+                                    </h3>
+                                    <h4 class="timeline-title">Chalapathi Institute of Engineering & Technology <br>CGPA - 7.67</h4>
+                                    <h4 class="timeline-title">
+                                        <i class="fa fa-calendar"></i> 2021-2025
+                                    </h4>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="circle-dot"></div>
+                                    <h3 class="timeline-title">Intermediate - 72%</h3>
+                                    <h4 class="timeline-title">Sri Vivekananda Central School</h4>
+                                    <h4 class="timeline-title">
+                                        <i class="fa fa-calendar"></i> 2019-2021
+                                    </h4>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="circle-dot"></div>
+                                    <h3 class="timeline-title">
+                                        SSC - 93%
+                                    </h3>
+                                    <h4 class="timeline-title">Viveka Public School</h4>
+                                    <h4 class="timeline-title">
+                                        <i class="fa fa-calendar"></i> 2018-2019
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="skills-content" id="MySkills">
+        <div class="container">
+            <div class="skills-title">
+                <h4>My Skills</h4>
+                <p>Explore my skills and expertise in various technologies</p>
+            </div>
+            <div class="skills">
+                <div class="skill">
+                    <h4>HTML</h4>
+                    <div class="progress-bar">
+                        <span class="html"></span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>CSS</h4>
+                    <div class="progress-bar">
+                        <span class="css"></span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>SQL</h4>
+                    <div class="progress-bar">
+                        <span class="js"></span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>Java</h4>
+                    <div class="progress-bar">
+                        <span class="java"></span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>Team Lead</h4>
+                    <div class="progress-bar">
+                        <span class="python"></span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>C#</h4>
+                    <div class="progress-bar">
+                        <span class="csharp"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="frameworks-content" id="FrameWorks">
+        <div class="container">
+            <div class="frameworks-title">
+                <h4>Frameworks</h4>
+                <p>Explore my skills and expertise in various technologies</p>
+            </div>
+            <div class="framework">
+                <h4>ADO.net</h4>
+                <p>ADO.NET is a data access technology from Microsoft that provides communication between relational and non-relational systems through a common set of components. </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-content" id="projects">
+        <div class="container">
+            <div class="project-title">
+                <h4>My Projects</h4>
+                <p>Discover my projects, where creativity meets innovation</p>
+            </div>
+            <div class="projects">
+                <div class="project">
+                    <i class="fa fa-coffee"></i>
+                    <h4>An Intelligent Fraud Detection</h4>
+                    <p>The project is a dynamic e-commerce web application with multiple user roles ( customers, vendors, admins). It includes fraud detection through transaction analysis, behavior monitoring, and real-time alerts to prevent fraudulent activities.
+                    </p>
+                </div>
+                <div class="project">
+                    <i class="fa fa-car"></i>
+                    <h4>EXAM MANAGEMENT SYSTEM</h4>
+                    <p>The CIET Electronic Examination Management System uses ADO.NET to streamline exam scheduling and grading. It provides faculty with tools for creating and analyzing exams, offering students a seamless, automated examination experience.</p>
+                </div>
+                <div class="project">
+                    <i class="fa fa-desktop"></i>
+                    <h4>Portfolio Website</h4>
+                    <p>Created a portfolio website using HTML, CSS, and JavaScript, It serves as a platform to introduce myself, share my projects, and provide information about my education and internship.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-content" id="contact">
+        <div class="container">
+            <div class="contact-title">
+                <h4>Contact Me</h4>
+                <p>Get In Touch</p>
+            </div>
+            <div class="contact">
+                <form action="https://formspree.io/f/mzzapgna" method="POST">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <input type="submit" value="Send Message" class="submit">
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        $(document).ready(function() {
+            // Sticky header
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 1) {
+                    $(".header-area").addClass("sticky");
+                } else {
+                    $(".header-area").removeClass("sticky");
+                }
+                updateActiveSection();
+            });
+
+            // Smooth scrolling and active link highlighting
+            $(".header ul li a").click(function(e) {
+                e.preventDefault();
+                var target = $(this).attr("href");
+                var offset = $(target).offset().top - 40;
+
+                $("html, body").animate({
+                    scrollTop: offset
+                }, 500);
+
+                $(".header ul li a").removeClass("active");
+                $(this).addClass("active");
+            });
+
+            // Menu icon for mobile
+            $(".menu_icon i").click(function() {
+                $(".header ul").slideToggle();
+            });
+
+            // Typing animation for the name
+            var typed = new Typed("#typing-name", {
+                strings: ["Kalyan Sai Tadivalasa", "A Software Engineer", "A Web Developer"],
+                typeSpeed: 100,
+                backSpeed: 60,
+                loop: true,
+            });
+
+            // Scroll reveal animations
+            ScrollReveal({
+                distance: "100px",
+                duration: 2000,
+                delay: 200
+            });
+
+            ScrollReveal().reveal(".header a, .profile-photo, .about-content, .education", {
+                origin: "left"
+            });
+            ScrollReveal().reveal(".header ul, .profile-text, .about-skills, .internship", {
+                origin: "right"
+            });
+            ScrollReveal().reveal(".project-title, .contact-title, .skills-title, .frameworks-title", {
+                origin: "top"
+            });
+            ScrollReveal().reveal(".project, .skill, .framework", {
+                origin: "bottom"
+            });
+
+            // Update active section on scroll
+            function updateActiveSection() {
+                var currentScroll = $(window).scrollTop();
+                $("section").each(function() {
+                    var sectionTop = $(this).offset().top - 80;
+                    var sectionBottom = sectionTop + $(this).outerHeight();
+                    var sectionId = $(this).attr("id");
+
+                    if (currentScroll >= sectionTop && currentScroll < sectionBottom) {
+                        $(".navbar a").removeClass("active");
+                        $(".navbar a[href='#" + sectionId + "']").addClass("active");
+                    }
+                });
+            }
+
+            // Contact form submission
+            const form = document.querySelector("form");
+            const msg = document.getElementById("msg");
+
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                fetch(form.action, {
+                        method: "POST",
+                        body: new FormData(form),
+                        headers: {
+                            Accept: "application/json",
+                        },
+                    })
+                    .then((response) => {
+                        if (response.ok) {
+                            msg.innerHTML = "Message Sent Successfully";
+                            setTimeout(() => {
+                                msg.innerHTML = "";
+                            }, 5000);
+                            form.reset();
+                        } else {
+                            msg.innerHTML = "Error sending message. Please try again.";
+                        }
+                    })
+                    .catch((error) => {
+                        msg.innerHTML = "Error sending message. Please try again.";
+                    });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
