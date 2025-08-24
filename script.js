@@ -1,73 +1,76 @@
-$(document).ready(function() {
-    // Sticky header
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 1) {
-            $(".header-area").addClass("sticky");
-        } else {
-            $(".header-area").removeClass("sticky");
-        }
-        updateActiveSection();
-    });
+/*---------------------------Typed Text Animation---------------------------*/
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
 
-    // Smooth scrolling and active link highlighting
-    $(".header ul li a").click(function(e) {
-        e.preventDefault();
-        var target = $(this).attr("href");
-        var offset = $(target).offset().top - 40;
-        $("html, body").animate({scrollTop: offset}, 500);
-        $(".header ul li a").removeClass("active");
-        $(this).addClass("active");
-    });
+const textArray = ["Software Developer", "Manual Tester", "Web Developer", "Freelancer"];
+const typingDelay = 100;
+const erasingDelay = 50;
+const newTextDelay = 2000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
 
-    // Menu icon for mobile
-    $(".menu_icon i").click(function() {
-        $(".header ul").slideToggle();
-    });
-
-    // Typing animation
-    var typed = new Typed("#typing-name", {
-        strings: ["Kalyan Sai Tadivalasa", "A Software Engineer", "A Web Developer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true,
-    });
-
-    // Scroll reveal animations
-    ScrollReveal({distance: "100px", duration: 2000, delay: 200});
-    ScrollReveal().reveal(".header a, .profile-photo, .about-content, .education", {origin: "left"});
-    ScrollReveal().reveal(".header ul, .profile-text, .about-skills, .internship", {origin: "right"});
-    ScrollReveal().reveal(".project-title, .contact-title, .skills-title, .frameworks-title", {origin: "top"});
-    ScrollReveal().reveal(".project, .skill, .framework", {origin: "bottom"});
-
-    // Update active section on scroll
-    function updateActiveSection() {
-        var currentScroll = $(window).scrollTop();
-        $("section").each(function() {
-            var sectionTop = $(this).offset().top - 80;
-            var sectionBottom = sectionTop + $(this).outerHeight();
-            var sectionId = $(this).attr("id");
-            if (currentScroll >= sectionTop && currentScroll < sectionBottom) {
-                $(".navbar a").removeClass("active");
-                $(".navbar a[href='#" + sectionId + "']").addClass("active");
-            }
-        });
+function type() {
+    if (charIndex < textArray[textArrayIndex].length) {
+        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+    } else {
+        cursorSpan.classList.remove("typing");
+        setTimeout(erase, newTextDelay);
     }
+}
 
-    // Contact form submission
-    const form = document.querySelector("form");
-    const msg = document.getElementById("msg");
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(form.action, {
-            method: "POST",
-            body: new FormData(form),
-            headers: { Accept: "application/json" }
-        }).then((response) => {
-            if (response.ok) {
-                msg.innerHTML = "Message Sent Successfully";
-                setTimeout(() => { msg.innerHTML = ""; }, 5000);
-                form.reset();
-            } else { msg.innerHTML = "Error sending message. Please try again."; }
-        }).catch(() => { msg.innerHTML = "Error sending message. Please try again."; });
-    });
+function erase() {
+    if (charIndex > 0) {
+        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+    } else {
+        cursorSpan.classList.remove("typing");
+        textArrayIndex++;
+        if(textArrayIndex >= textArray.length) textArrayIndex = 0;
+        setTimeout(type, typingDelay + 1100);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+
+/*---------------------------ScrollReveal Animations---------------------------*/
+ScrollReveal().reveal('.header', {
+    duration: 1500,
+    origin: 'top',
+    distance: '50px'
+});
+
+ScrollReveal().reveal('.FirstElement', {
+    duration: 1500,
+    origin: 'bottom',
+    distance: '50px',
+    delay: 300
+});
+
+ScrollReveal().reveal('.about-area', {
+    duration: 1500,
+    origin: 'left',
+    distance: '50px',
+    delay: 300
+});
+
+ScrollReveal().reveal('.education-content', {
+    duration: 1500,
+    origin: 'right',
+    distance: '50px',
+    delay: 300
+});
+
+ScrollReveal().reveal('.skills-content', {
+    duration: 1500,
+    origin: 'bottom',
+    distance: '50px',
+    delay: 300
 });
