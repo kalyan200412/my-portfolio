@@ -259,19 +259,24 @@
             border-radius: 5px;
             height: 400px;
             margin-bottom: 250px;
+            justify-content: center;
+            /* centers items horizontally */
+            align-items: center;
+            /* centers items vertically */
+            flex-wrap: wrap;
+            /* allows items to wrap on smaller screens */
         }
         
         .education-content .title {
             color: #fed700;
         }
         
-        .education-content .row .education,
-        .education-content {
+        .education-content .row .education {
             color: #e5e5e5;
             flex: 0 0 50%;
             max-width: 50%;
-            margin-top: 30px;
-            margin-left: 350px;
+            margin: 30px auto 0 auto;
+            /* centers this column */
         }
         
         .education-content h3.title {
