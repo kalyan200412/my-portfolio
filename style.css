@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -32,8 +31,8 @@ body {
     width: 1170px;
     margin: auto;
 }
-
 /*---------------------------Header---------------------------*/
+
 .header-area {
     padding: 25px 0;
     transition: padding .3s;
@@ -106,8 +105,8 @@ body {
     cursor: pointer;
     display: none;
 }
-
 /*---------------------------HomePage--------------------------*/
+
 .FirstElement {
     display: flex;
     justify-content: space-around;
@@ -125,7 +124,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
     border: 15px solid #444444;
-    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5)
 }
 
 .profile-photo .img {
@@ -169,8 +168,8 @@ body {
     color: #fed700;
     transform: rotate(360deg);
 }
-
 /*---------------------------About---------------------------*/
+
 .about-area {
     padding-top: 130px;
     background-color: #202020;
@@ -221,8 +220,8 @@ body {
     padding-bottom: 0;
     margin-bottom: 0;
 }
-
 /*---------------------------Button---------------------------*/
+
 .btn-group {
     margin: 45px 0;
 }
@@ -242,8 +241,8 @@ body {
 .btn.active {
     border-color: #fed700;
 }
-
 /*---------------------------Education & Internship---------------------------*/
+
 .education-content .row {
     display: flex;
     border-radius: 5px;
@@ -344,8 +343,8 @@ body {
     align-items: center;
     text-align: center;
 }
+/* --------------------------Skills ----------------------------- */
 
-/*--------------------------Skills-----------------------------*/
 .skills-content {
     padding: 100px 0;
     color: #fff;
@@ -408,32 +407,314 @@ body {
 
 .progress-bar span {
     display: block;
-    height: 10px;
-    width: 0;
-    background-color: #fed700;
+    height: 100%;
+    width: 0%;
+    background-color: #fe9800;
+    border-radius: 20px;
+    transition: width 2s ease-in-out;
+}
+/* Define widths for each skill */
+
+.progress-bar span.html {
+    width: 98%;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+.progress-bar span.css {
+    width: 89%;
+}
+
+.progress-bar span.js {
+    width: 80%;
+}
+
+.progress-bar span.java {
+    width: 87%;
+}
+
+.progress-bar span.python {
+    width: 79%;
+}
+
+.progress-bar span.c {
+    width: 99%;
+}
+
+.progress-bar span.csharp {
+    width: 85%;
+}
+/*-------------------------- frameworks------------------------ */
+
+.frameworks-content {
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.frameworks-title {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.frameworks-content .frameworks-title h4 {
+    font-size: 40px;
+    text-transform: capitalize;
+    color: #fed700;
+    padding-bottom: 10px;
+}
+
+.frameworks-content .frameworks-title p {
+    padding-bottom: 20px;
+}
+
+.frameworks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.framework {
+    color: hsl(0, 0%, 90%);
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    padding: 8px;
+    text-align: center;
+    flex-basis: 32%;
+    transition: .3s;
+    margin: 5px;
+}
+
+.framework:hover {
+    border-color: #fed700;
+}
+
+.framework h4 {
+    font-size: 26px;
+    color: #fe9800;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+
+.framework p {
+    text-align: justify;
+}
+/*---------------------------Projects---------------------------*/
+
+.project-content {
+    padding: 90px 0;
+}
+
+.project-title {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.project-title h4 {
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 40px;
+    color: #fed700;
+    margin-bottom: 20px;
+}
+
+.project-title p {
+    color: #e5e5e5;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project {
+    color: #e5e5e5;
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    padding: 25px;
+    text-align: center;
+    flex-basis: 32%;
+    transition: .3s;
+}
+
+.project i {
+    background-color: #fed700;
+    width: 60px;
+    height: 60px;
+    color: #333;
+    font-size: 26px;
+    line-height: 60px;
+    border-radius: 50%;
+}
+
+.project h4 {
+    font-size: 26px;
+    color: #fe9800;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+
+.project p {
+    text-align: justify;
+}
+
+.project:hover {
+    border-color: #fed700;
+}
+/*---------------------------Contact Me---------------------------*/
+
+.contact-content {
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-content .contact-title h4 {
+    font-size: 40px;
+    text-transform: capitalize;
+    color: #fed700;
+    padding-bottom: 10px;
+}
+
+.contact-content .contact-title p {
+    padding-bottom: 20px;
+}
+
+.contact {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.contact .submit {
+    width: auto;
+    background-color: #fed700;
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contact .submit:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#msg {
+    color: #fff;
+    font-size: 20px;
+    margin-top: -8px;
+    display: block;
+}
+
+input,
+textarea {
+    background-color: #ffffff;
+    color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+}
+/*---------------------------Footer---------------------------*/
+
+.footer {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 15px 0 26px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer .message {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 10px;
+}
+
+.copyright {
+    font-size: 12px;
+}
+/*------------------- Responsive Design on small screen -------------------*/
+/* Medium layout */
+
+@media only screen and (min-width:1000px) and (max-width:1200px) {
     .container {
-        width: 95%;
+        width: 970px;
     }
+}
+
+@media(max-width:1050px) {
     .FirstElement {
         flex-direction: column;
-        padding-top: 80px;
+        padding-top: 2rem;
     }
-    .header ul {
-        display: none;
+    .profile-text {
+        padding: 40px 0px;
+    }
+}
+/* tablet layout */
+
+@media only screen and (min-width:768px) and (max-width:999px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Mobile Layout */
+
+@media only screen and (max-width:767px) {
+    .container {
+        width: 350px;
     }
     .header .menu_icon {
         display: block;
     }
+    .header ul {
+        display: none;
+    }
+    .header i {
+        color: #e5e5e5;
+    }
+    .profile-text {
+        width: 350px;
+    }
+    .FirstElement .profile-text p {
+        text-align: justify;
+    }
+    .about {
+        flex-direction: column;
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .about-skills {
+        width: 100%;
+        margin-top: 30px;
+    }
     .education-content .row {
         flex-direction: column;
-        margin-left: 0;
+        height: auto;
+        margin-bottom: 50px;
     }
-    .education-content .row .education {
-        margin-left: 0;
+    .education-content .row .education,
+    .education-content .row .internship {
+        flex-basis: 100%;
         max-width: 100%;
+        margin-top: 30px;
+    }
+    .project {
+        flex-basis: 100%;
+        margin-bottom: 30px;
     }
 }
