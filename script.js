@@ -62,11 +62,41 @@ $(document).ready(function() {
         $("section").each(function() {
             var sectionTop = $(this).offset().top - 80;
             var sectionBottom = sectionTop + $(this).outerHeight();
+            var sectionId = $(this).attr("id");
+
             if (currentScroll >= sectionTop && currentScroll < sectionBottom) {
-                var target = "#" + $(this).attr("id");
-                $(".header ul li a").removeClass("active");
-                $('.header ul li a[href="' + target + '"]').addClass("active");
+                $(".navbar a").removeClass("active");
+                $('.navbar a[href="#' + sectionId + '"]').addClass("active");
             }
         });
     }
+
+    // Contact form submission
+    const form = document.querySelector("form");
+    const msg = document.getElementById("msg");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+                headers: {
+                    Accept: "application/json",
+                },
+            })
+            .then((response) => {
+                if (response.ok) {
+                    msg.innerHTML = "Message Sent Successfully";
+                    setTimeout(() => {
+                        msg.innerHTML = "";
+                    }, 5000);
+                    form.reset();
+                } else {
+                    msg.innerHTML = "Error sending message. Please try again.";
+                }
+            })
+            .catch((error) => {
+                msg.innerHTML = "Error sending message. Please try again.";
+            });
+    });
 });
